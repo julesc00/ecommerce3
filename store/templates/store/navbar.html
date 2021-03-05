@@ -1,0 +1,59 @@
+{% extends "store/_base.html" %}
+{% load static %}
+
+{% block content %}
+    <header>
+    <nav class="navbar navbar-expand-md navbar-light bg-white border-bottom">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">BookStore</a>
+            <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item active">
+                        <a href="/" class="nav-link" aria-current="page">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a
+                                href="#"
+                                class="nav-link dropdown-toggle"
+                                id="navbarDropdown"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                        >
+                            Library
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a href="{% url 'store:all_products' %}" class="dropdown-item">All</a></li>
+                            {% for c in categories %}
+                                <li {% if category.slug == c.slug %} class="selected" {% endif %}>
+                                    <a href="{{ c.get_absolute_url }}" class="dropdown-item">
+                                        {{ c.name|title }}
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex" action="">
+                    <input type="search" placeholder="Search" aria-label="Search" class="form-control me-2">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    </header>
+{% endblock %}

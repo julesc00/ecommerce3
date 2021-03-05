@@ -5,6 +5,9 @@ from .models import Category, Product
 
 def all_products(request):
     products = Product.objects.all()
-    context = {"products": products}
+    context = {
+        "products": products,
+        "title": "Products Page"
+    }
 
     return render(request, "store/home.html", context)

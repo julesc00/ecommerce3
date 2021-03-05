@@ -1,6 +1,21 @@
 {% extends "store/_base.html" %}
 {% load static %}
 
+{% block title %}{{ title }}{% endblock %}
+
 {% block content %}
-    <h2>Hello world!</h2>
+    {% include "store/navbar.html" %}
+
+    <div class="container">
+        <h1>Products</h1>
+        <div class="row">
+            <div class="col-lg">
+                {% for product in products %}
+                    <p>{{ product.title }}</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    {% include "store/footer.html" %}
 {% endblock %}
