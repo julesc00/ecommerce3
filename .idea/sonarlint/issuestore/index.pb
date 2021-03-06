@@ -28,3 +28,19 @@ B
 	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 J
 store/tests/test_models.py,c/f/cf2e0e6793d032d7481488d6018a94183e4917bf
+7
+Pipfile,1/5/15af4b3d30054104e85f65a444b1db188c5deefb
+<
+Pipfile.lock,e/5/e563262209b7c2e62d1869582c8134583baa2204
+M
+store/static/store/js/main.js,d/5/d505a9af28731aa62a5ca5673aabe500f56dd5ee
+>
+store/views.py,c/8/c842493f8c3c6ac29ef61cab9fc46d3af02e60bc
+Q
+!store/templates/store/footer.html,3/f/3f2fd567b3f9514d6c5c25cfccbc69169e3ed7fb
+P
+ store/templates/store/_base.html,8/6/86b9b8452acf7bd635ac0d03f32dafded826d617
+O
+store/templates/store/home.html,f/e/fe9ea1aa988d0237b08a7b5b6f56c132f1b11ef8
+Q
+!store/templates/store/navbar.html,2/2/22e0e0e6adee6cd8d77da37301dca44013024cda

@@ -6,16 +6,44 @@
 {% block content %}
     {% include "store/navbar.html" %}
 
-    <div class="container">
-        <h1>Products</h1>
-        <div class="row">
-            <div class="col-lg">
+    <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+            <div class="col lg-6 col-md-8 mx-auto">
+                <h1 class="fw-light">Products</h1>
+                <p class="lead text-muted">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, temporibus.
+                </p>
+                <p>
+                    <a href="#" class="btn btn-primary my-2">Main action</a>
+                    <a href="#" class="btn btn-secondary my-2">Second Action</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="pb-3 h5">All Books</div>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                 {% for product in products %}
-                    <p>{{ product.title }}</p>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img class="img-fluid" alt="Responsive image" src="{{ product.image.url }}">
+                            <div class="card-body">
+                                <p class="card-text">
+                                    <a href="{{ product.get_absolute_url }}" class="text-dark text-decoration-none">
+                                        {{ product.title }}
+                                    </a>
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">9 min read</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 {% endfor %}
             </div>
         </div>
     </div>
-
     {% include "store/footer.html" %}
 {% endblock %}
