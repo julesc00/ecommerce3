@@ -44,3 +44,7 @@ O
 store/templates/store/home.html,f/e/fe9ea1aa988d0237b08a7b5b6f56c132f1b11ef8
 Q
 !store/templates/store/navbar.html,2/2/22e0e0e6adee6cd8d77da37301dca44013024cda
+Z
+*store/templates/store/products/detail.html,1/9/19aeb06a33394ba62ccfadc7b2342c096740343a
+\
+,store/templates/store/products/category.html,8/5/85bd7fb6a7ff68684aeff43d322141b176d4d5c1
