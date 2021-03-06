@@ -1,6 +1,6 @@
 from unittest import skip
 
-from django.test import TestCase, Client
+from django.test import TestCase, Client, RequestFactory
 from django.contrib.auth.models import User
 from django.http import HttpRequest
 from django.urls import reverse
@@ -20,6 +20,7 @@ class TestSkip(TestCase):
 class TestViewResponses(TestCase):
     def setUp(self):
         self.c = Client()
+        self.factory = RequestFactory()
         User.objects.create(username="julesc00")
         Category.objects.create(name="django", slug="django")
         Product.objects.create(
@@ -55,4 +56,14 @@ class TestViewResponses(TestCase):
         html = response.content.decode("utf8")
 
         self.assertIn("<title>Products Page</title", html)
+        self.assertTrue(html.startswith("\n<!doctype html>\n"))
+        self.assertEqual(response.status_code, 200)
 
+    def test_view_function(self):
+        request = self.factory.get("/product/django-beginners")
+        response = all_products(request)
+        html = response.content.decode("utf8")
+
+        self.assertIn("<title>Products Page</title", html)
+        self.assertTrue(html.startswith("\n<!doctype html>\n"))
+        self.assertEqual(response.status_code, 200)
