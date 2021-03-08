@@ -48,3 +48,9 @@ Z
 *store/templates/store/products/detail.html,1/9/19aeb06a33394ba62ccfadc7b2342c096740343a
 \
 ,store/templates/store/products/category.html,8/5/85bd7fb6a7ff68684aeff43d322141b176d4d5c1
+=
+core/tests.py,f/0/f0ee9b29a9b6fb763d5114e01dacf3beaa34ab94
+=
+api/models.py,5/d/5de3a0d32813236411441702f4133a7730141c5b
+9
+	setup.cfg,8/c/8c91c0296909b5ea3c496fde69e9dc44a6c6ae5f

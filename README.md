@@ -4,3 +4,5 @@ Django & Django REST Framework with Bootstrap
  
     -> coverage run --omit='*/virtualenvs/*' manage.py test
  Note: This is for pipenv created virtual environment.
+   
+2. Install flake8 for PEP8, and create a setup.cfg file.

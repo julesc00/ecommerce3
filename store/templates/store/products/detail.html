@@ -3,6 +3,8 @@
 {% block title %}Product Detail{% endblock %}
 
 {% block content %}
+    {% include "store/navbar.html" %}
+
     <div class="container">
         <main class="pt-5">
             <div class="row g-3">
@@ -49,4 +51,6 @@
             </div>
         </main>
     </div>
+
+    {% include "store/footer.html" %}
 {% endblock %}
