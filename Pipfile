@@ -10,6 +10,7 @@ django = "*"
 pillow = "*"
 coverage = "*"
 flake8 = "*"
+isort = "*"
 
 [requires]
 python_version = "3.7"

@@ -9,6 +9,7 @@
 
     {% block css %}
         <link href="{% static 'store/css/bootstrap.min.css' %}" rel="stylesheet" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="{% static 'store/css/main.css' %}">
     {% endblock %}
 
@@ -17,9 +18,13 @@
 <body>
 
 <div id="content">
-    {% block content %}
 
+    {% block content %}
+        {% include "store/navbar.html" %}
+
+        {% include "store/footer.html" %}
     {% endblock %}
+
 </div>
 
 {% block javascript %}
