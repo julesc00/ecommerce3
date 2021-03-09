@@ -3,11 +3,11 @@ from django.shortcuts import render, get_object_or_404
 from .models import Category, Product
 
 
-def all_products(request):
+def products_all(request):
     products = Product.products.all()
     context = {
         "products": products,
-        "title": "Products Page"
+        "title": "BookStore"
     }
 
     return render(request, "store/home.html", context)
@@ -17,7 +17,7 @@ def product_detail(request, slug):
     product = get_object_or_404(Product, slug=slug, in_stock=True)
     context = {"product": product}
 
-    return render(request, "store/products/detail.html", context)
+    return render(request, "store/products/single.html", context)
 
 
 def category_list(request, category_slug):
