@@ -29,7 +29,7 @@ class Product(models.Model):
     author = models.CharField(max_length=200, default="admin", null=True, blank=True)
     description = models.TextField(blank=True, null=True)
     created_by = models.ForeignKey(User, related_name="product_creator", on_delete=models.CASCADE, null=True)
-    image = models.ImageField(upload_to="images/")
+    image = models.ImageField(upload_to="images/", default="images/default.png")
     slug = models.SlugField(max_length=200, unique=True, null=True, blank=True)
     in_stock = models.BooleanField(default=True, null=True)
     is_active = models.BooleanField(default=True, null=True)
