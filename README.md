@@ -6,3 +6,5 @@ Django & Django REST Framework with Bootstrap
  Note: This is for pipenv created virtual environment.
    
 2. Install flake8 for PEP8, and create a setup.cfg file.
+
+3. isort for ordering imports.

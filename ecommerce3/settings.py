@@ -20,6 +20,7 @@ INSTALLED_APPS = [
     'core.apps.CoreConfig',
     'store.apps.StoreConfig',
     'api.apps.ApiConfig',
+    'basket.apps.BasketConfig',
 ]
 
 MIDDLEWARE = [
@@ -48,6 +49,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
 
                 'store.context_processors.categories',
+                'basket.context_processors.basket',
             ],
         },
     },

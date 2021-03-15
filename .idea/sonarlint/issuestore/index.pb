@@ -52,3 +52,15 @@ Q
 api/models.py,5/d/5de3a0d32813236411441702f4133a7730141c5b
 9
 	setup.cfg,8/c/8c91c0296909b5ea3c496fde69e9dc44a6c6ae5f
+Z
+*store/templates/store/products/single.html,0/4/04e2407c191f4df0b8ddd9486ed97f48df624f2f
+=
+core/views.py,4/7/4706701c005a11d84d8ae7731365c7c336e3f466
+?
+basket/views.py,0/f/0f61e3e2a305ee7a9ef8fb9cb7026ff93dd203bc
+>
+basket/urls.py,a/8/a86ccf2ba047c9b9ff639570c6949a65e8475bf8
+Y
+)store/templates/store/basket/summary.html,3/2/3279ab12eff05ddee9a2c66e6499c7eb1c1ed993
+@
+basket/basket.py,7/f/7fe6f3cb143a6d3a299550087f82d5a98cd3217a
