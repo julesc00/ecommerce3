@@ -6,8 +6,9 @@ from store.models import Product
 
 
 def basket_summary(request):
+    basket = Basket(request)
+    context = {"basket": basket}
 
-    context = {}
     return render(request, "store/basket/summary.html", context)
 
 
@@ -24,3 +25,7 @@ def basket_add(request):
         response = JsonResponse({"qty": basket_qty})
 
         return response
+
+
+def basket_delete(request):
+    pass
